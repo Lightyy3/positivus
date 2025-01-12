@@ -62,24 +62,24 @@ export default function Accordion() {
               openIndex === index
                 ? "border-green-500 bg-green-100"
                 : "border-gray-300 bg-gray-50"
-            } mb-4 `}
+            } mb-4`}
           >
             {/* Accordion Header */}
             <div
-              className="flex justify-between  p-4 cursor-pointer"
+              className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 cursor-pointer"
               onClick={() => toggleAccordion(index)}
             >
               <h3
-                className={`text-lg font-semibold ${
+                className={`text-base sm:text-lg font-semibold ${
                   openIndex === index ? "text-gray-900" : "text-gray-700"
-                }`}
+                } break-words sm:truncate max-w-full`}
               >
                 {item.title}
               </h3>
               <button
-                className={`text-lg font-bold ${
+                className={`text-base sm:text-lg font-bold ${
                   openIndex === index ? "text-gray-900" : "text-gray-500"
-                }`}
+                } mt-2 sm:mt-0`}
               >
                 {openIndex === index ? "-" : "+"}
               </button>
@@ -89,7 +89,7 @@ export default function Accordion() {
             {openIndex === index && (
               <div>
                 {/* Delimiting Line */}
-                <div className="p-4 text-gray-600 border-t-2 border-gray-300 mx-4">
+                <div className="p-4 text-sm sm:text-base text-gray-600 border-t-2 border-gray-300 mx-4 break-words sm:truncate">
                   <p>{item.description}</p>
                 </div>
               </div>

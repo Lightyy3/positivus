@@ -30,9 +30,9 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-10">
+        <nav className="hidden lg:flex space-x-10">
           {files.map((item) => (
-            <Link
+            <a
               key={item.href}
               href={item.href}
               className={
@@ -42,9 +42,9 @@ export default function Header() {
               }
             >
               {item.label}
-            </Link>
+            </a>
           ))}
-          <Link
+          <a
             href="/Quote"
             className={
               path === "/Quote"
@@ -53,12 +53,12 @@ export default function Header() {
             }
           >
             Request a quote
-          </Link>
+          </a>
         </nav>
         {/* Mobile Hamburger Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden flex text-gray-700 mt-3"
+          className="lg:hidden flex text-gray-700 mt-3"
         >
           <svg
             className="w-6 h-6"
@@ -78,24 +78,24 @@ export default function Header() {
       </div>
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-white shadow-md rounded-md">
+        <nav className="lg:hidden bg-white shadow-md rounded-md">
           <div className="space-y-2 px-4 py-4">
             <hr className="w-full h-1 bg-green-500" />
             {files.map((item) => (
-              <Link
+              <a
                 key={item.href}
                 href={item.href}
                 className="block text-gray-700 hover:text-green-500 py-2 text-center"
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
-            <Link
+            <a
               href="/Quote"
               className="block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 text-center"
             >
               Request a quote
-            </Link>
+            </a>
           </div>
         </nav>
       )}

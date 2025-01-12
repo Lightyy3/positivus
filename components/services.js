@@ -65,11 +65,11 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-24 grid  md:grid-cols-2 gap-14">
+        <div className="mt-24 grid  lg:grid-cols-2 gap-14">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`flex p-6 rounded-3xl border-2 border-black h-44 ${service.bgColor}`}
+              className={`flex p-4 rounded-3xl border-2 border-black h-44 ${service.bgColor}`}
             >
               <div>
                 <div className="space-x-4">
@@ -79,9 +79,9 @@ export default function Services() {
                     {service.title}
                   </h3>
                 </div>
-                <Link
+                <a
                   href="/Usecases"
-                  className={`flex items-center mt-4 ml-1 text-xl ${service.descriptionColor} hover:text-green-300 space-x-2`}
+                  className={`flex pb-3 items-center mt-4 ml-1 text-xl ${service.descriptionColor} hover:text-green-300 space-x-2`}
                 >
                   <span>Learn more</span>
                   <svg
@@ -89,18 +89,21 @@ export default function Services() {
                     viewBox="0 0 24 24"
                     strokeWidth={2}
                     stroke="currentColor"
-                    className="w-5 h-5 mt-2 rounded-3xl -rotate-45"
+                    className="w-5 h-5 mt-2 rounded-3xl -rotate-45 "
                   >
                     <path d="M17.25 6.75L21 12l-3.75 5.25M3 12h18" />
                   </svg>
-                </Link>
+                </a>
               </div>
-              <div className="absolute ml-60 md:ml-100 md:pl-24 mt-auto md:mt-0">
-                <img
-                  src={service.icon}
-                  alt="icon"
-                  className=" rounded-xl h-28 w-28 md:h-32 md:w-32 "
-                />
+              <div className="flex-1 relative mx-auto max-w-screen-sm items-center invisible sm:visible ml-32 lg:ml-12">
+                {/* Black Circle */}
+                <div className="w-20 h-20  bg-black rounded-full absolute top-6 left-12"></div>
+                {/* White Outer Star */}
+                <div className="w-16 h-16  bg-white border border-gray-400 rounded-full absolute top-0 left-28"></div>
+                {/* Green Star */}
+                <div className="w-14 h-14  bg-lime-400 rotate-45 absolute top-20 left-16"></div>
+                {/* Gray Star */}
+                <div className="w-12 h-12  bg-gray-200 rounded-full absolute top-10 left-36"></div>
               </div>
             </div>
           ))}

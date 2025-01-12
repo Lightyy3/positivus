@@ -121,8 +121,8 @@ export default function Form() {
             className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
-        <div className="mt-8 text-center">
-          <button className="bg-green-600 text-white px-8 py-4 text-lg rounded-full hover:bg-green-700 ">
+        <div className="mt-8 text-center ">
+          <button className="bg-green-600 text-white px-2 xs:px-8 py-4 text-lg rounded-full hover:bg-green-700  max-w-screen-xl mx-auto">
             Submit Request
           </button>
         </div>

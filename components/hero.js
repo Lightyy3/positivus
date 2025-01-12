@@ -16,12 +16,12 @@ export default function Hero() {
             </p>
 
             <div className="mt-6 flex space-x-4 items-center">
-              <Link
+              <a
                 href="/Quote"
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full"
+                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 text-center rounded-full"
               >
                 Book a consultation
-              </Link>
+              </a>
             </div>
           </div>
 
