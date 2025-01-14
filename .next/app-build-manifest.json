@@ -11,16 +11,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/Quote/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/Quote/page.js"
-    ],
-    "/About/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/About/page.js"
-    ],
     "/Services/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -31,6 +21,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/Usecases/page.js"
     ],
+    "/About/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/About/page.js"
+    ],
     "/List/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -40,6 +35,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/Blog/page.js"
+    ],
+    "/Quote/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Quote/page.js"
     ]
   }
 }

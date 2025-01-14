@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Logo from "@/components/logo";
@@ -10,11 +11,7 @@ export default function HomePage() {
       <Hero />
       <Logo />
       <Services />
-      <footer className="bg-gray-200 py-4">
-        <div className="max-w-7xl mx-auto px-4 text-center text-gray-600">
-          &copy; 2025 My Website. All rights reserved.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

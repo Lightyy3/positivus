@@ -3,10 +3,14 @@
 import { useState } from "react";
 
 export default function Accordion() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndices, setOpenIndices] = useState([]);
 
   function toggleAccordion(index) {
-    setOpenIndex(openIndex === index ? null : index);
+    if (openIndices.includes(index)) {
+      setOpenIndices(openIndices.filter((i) => i !== index)); // Close the item
+    } else {
+      setOpenIndices([...openIndices, index]); // Open the item
+    }
   }
 
   const items = [
@@ -59,37 +63,38 @@ export default function Accordion() {
           <div
             key={index}
             className={`rounded-xl shadow-md border-2 ${
-              openIndex === index
+              openIndices.includes(index)
                 ? "border-green-500 bg-green-100"
                 : "border-gray-300 bg-gray-50"
             } mb-4`}
           >
-            {/* Accordion Header */}
             <div
               className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 cursor-pointer"
               onClick={() => toggleAccordion(index)}
             >
               <h3
                 className={`text-base sm:text-lg font-semibold ${
-                  openIndex === index ? "text-gray-900" : "text-gray-700"
+                  openIndices.includes(index)
+                    ? "text-gray-900"
+                    : "text-gray-700"
                 } break-words sm:truncate max-w-full`}
               >
                 {item.title}
               </h3>
               <button
                 className={`text-base sm:text-lg font-bold ${
-                  openIndex === index ? "text-gray-900" : "text-gray-500"
+                  openIndices.includes(index)
+                    ? "text-gray-900"
+                    : "text-gray-500"
                 } mt-2 sm:mt-0`}
               >
-                {openIndex === index ? "-" : "+"}
+                {openIndices.includes(index) ? "-" : "+"}
               </button>
             </div>
 
-            {/* Accordion Description */}
-            {openIndex === index && (
+            {openIndices.includes(index) && (
               <div>
-                {/* Delimiting Line */}
-                <div className="p-4 text-sm sm:text-base text-gray-600 border-t-2 border-gray-300 mx-4 break-words sm:truncate">
+                <div className="p-4 ml-auto text-sm sm:text-base text-gray-600 border-t-2 border-gray-300 mx-4 break-words">
                   <p>{item.description}</p>
                 </div>
               </div>

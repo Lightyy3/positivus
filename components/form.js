@@ -20,29 +20,6 @@ export default function Form() {
     }));
   };
 
-  //   const handleSubmit = (event) => {
-  //     event.preventDefault();
-  //     // Store formData in localStorage or pass it through query parameters
-  //     const storedData = JSON.parse(localStorage.getItem("requests")) || [];
-  //     storedData.push(formData);
-  //     localStorage.setItem("requests", JSON.stringify(storedData));
-
-  //     // Redirect to RequestList page
-  //     router.push("/List");
-  //   };
-
-  //   async function shareItem(formData) {
-  //     "use server";
-
-  //     const item = {
-  //       name: formData.get("name"),
-  //       email: formData.get("email"),
-  //       service: formData.get("service"),
-  //       details: formData.get("details"),
-  //       budget: formData.get("budget"),
-  //     };
-  //   }
-
   return (
     <>
       <form action={shareItem}>

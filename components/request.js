@@ -1,34 +1,7 @@
 import { getItems } from "@/lib/items";
 
-import DeleteButton from "./button";
-
 export default function Request() {
-  // const [requests, setRequests] = useState([]);
-
-  // useEffect(() => {
-  //   // Get stored requests from localStorage
-  //   const storedRequests = JSON.parse(localStorage.getItem("requests")) || [];
-  //   setRequests(storedRequests);
-  // }, []);
-
   const requests = getItems();
-  // ///////
-  // const handleDelete = (id) => {
-  //   // Delete the item from the database
-  //   deleteItem(id);
-
-  //   // Reload the page to reflect the changes
-  //   window.location.reload();
-  // };
-
-  // const [requests, setRequests] = useState(getItems());
-
-  // const handleDelete = (id) => {
-  //   // Update the state to remove the deleted item
-  //   setRequests((prevRequests) =>
-  //     prevRequests.filter((request) => request.id !== id)
-  //   );
-  // };
 
   return (
     <>
@@ -47,7 +20,6 @@ export default function Request() {
             {request.budget && (
               <p className="text-gray-700">Budget: {request.budget}</p>
             )}
-            {/* <DeleteButton id={request.id} onDelete={handleDelete} /> */}
           </div>
         ))}
       </div>

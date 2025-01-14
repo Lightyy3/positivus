@@ -92,7 +92,7 @@ export default function About() {
 
                 <p className="text-sm text-gray-500">{member.role} </p>
                 <div className="mt-4 container ">
-                  <a
+                  <Link
                     href="/Services"
                     className="text-green-600 hover:text-green-800 "
                   >
@@ -104,7 +104,7 @@ export default function About() {
                     >
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.104-.896-2-2-2s-2 .896-2 2v5.5h-3v-10h3v1.268c.825-.977 2.075-1.268 3.292-1.268 2.206 0 4.708 1.502 4.708 4.5v5.5z" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
                 <hr className="md:block w-64  h-4" />
                 <p className="mt-2 text-sm text-gray-600">

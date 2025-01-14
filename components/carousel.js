@@ -17,7 +17,6 @@ export default function Carousel({ testimonials }) {
       <section className="bg-gray-900 text-white py-12 mt-12">
         <div className="max-w-screen-xl mx-auto">
           <div className="flex flex-col items-center space-y-8">
-            {/* Testimonial Card */}
             <div className="relative bg-gray-800 rounded-xl p-6 shadow-lg max-w-3xl text-center">
               <p className="text-lg font-light ">
                 {testimonials[currentIndex].text}
@@ -30,13 +29,11 @@ export default function Carousel({ testimonials }) {
                   {testimonials[currentIndex].title}
                 </p>
               </div>
-              {/* Green Border */}
+
               <div className="absolute inset-0 border-2 border-lime-400 rounded-xl "></div>
             </div>
 
-            {/* Navigation and Indicators */}
             <div className="flex items-center justify-between w-full max-w-xs">
-              {/* Previous Button */}
               <button
                 onClick={handlePrev}
                 className="bg-gray-700 hover:bg-gray-600 p-3 rounded-full"
@@ -53,7 +50,6 @@ export default function Carousel({ testimonials }) {
                 </svg>
               </button>
 
-              {/* Star Indicators */}
               <div className="flex space-x-2">
                 {testimonials.map((_, index) => (
                   <div
@@ -65,7 +61,6 @@ export default function Carousel({ testimonials }) {
                 ))}
               </div>
 
-              {/* Next Button */}
               <button
                 onClick={handleNext}
                 className="bg-gray-700 hover:bg-gray-600 p-3 rounded-full"

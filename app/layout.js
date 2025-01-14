@@ -1,14 +1,20 @@
-import './globals.css';
+import "./globals.css";
+import { Space_Grotesk } from "next/font/google";
 
 export const metadata = {
-  title: 'Next.js Page Routing & Rendering',
-  description: 'Learn how to route to different pages.',
-}
+  title: "Positivus",
+  description: "Digital Marketing",
+};
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function RootLayout({ children }) {
- return (
+  return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={spaceGrotesk.className}>{children}</body>
     </html>
-  )
+  );
 }

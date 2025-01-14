@@ -85,12 +85,12 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <a
+                <Link
                   href="/Quote"
                   className="bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700"
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
             ))}
           </div>
