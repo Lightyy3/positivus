@@ -62,10 +62,10 @@ export default function Services() {
       <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:space-x-6">
-            <h2 className="text-4xl font-bold text-gray-900 bg-green-500 p-2 rounded-xl">
+            <h2 className="text-4xl font-bold text-gray-900 bg-green-500 p-3 rounded-3xl">
               Services
             </h2>
-            <p className="mt-4 md:mt-0 text-md text-gray-700 max-w-2xl">
+            <p className="mt-6 md:mt-0 text-md text-gray-700 max-w-2xl text-center ">
               We provide a comprehensive suite of digital marketing solutions
               designed to help your business thrive in the online world. Explore
               our offerings below:
@@ -78,7 +78,7 @@ export default function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`relative p-4 rounded-3xl border-b-2 border-b-black ${service.bgColor}`}
+                className={`relative p-4 rounded-3xl border-b-2 h-56 border-b-black ${service.bgColor}`}
               >
                 <div className="flex justify-between gap-4">
                   <div

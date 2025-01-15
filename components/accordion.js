@@ -3,14 +3,10 @@
 import { useState } from "react";
 
 export default function Accordion() {
-  const [openIndices, setOpenIndices] = useState([]);
+  const [openIndex, setOpenIndex] = useState(null);
 
   function toggleAccordion(index) {
-    if (openIndices.includes(index)) {
-      setOpenIndices(openIndices.filter((i) => i !== index)); // Close the item
-    } else {
-      setOpenIndices([...openIndices, index]); // Open the item
-    }
+    setOpenIndex(openIndex === index ? null : index);
   }
 
   const items = [
@@ -63,7 +59,7 @@ export default function Accordion() {
           <div
             key={index}
             className={`rounded-xl shadow-md border-2 ${
-              openIndices.includes(index)
+              openIndex === index
                 ? "border-green-500 bg-green-100"
                 : "border-gray-300 bg-gray-50"
             } mb-4`}
@@ -74,25 +70,21 @@ export default function Accordion() {
             >
               <h3
                 className={`text-base sm:text-lg font-semibold ${
-                  openIndices.includes(index)
-                    ? "text-gray-900"
-                    : "text-gray-700"
+                  openIndex === index ? "text-gray-900" : "text-gray-700"
                 } break-words sm:truncate max-w-full`}
               >
                 {item.title}
               </h3>
               <button
                 className={`text-base sm:text-lg font-bold ${
-                  openIndices.includes(index)
-                    ? "text-gray-900"
-                    : "text-gray-500"
+                  openIndex === index ? "text-gray-900" : "text-gray-500"
                 } mt-2 sm:mt-0`}
               >
-                {openIndices.includes(index) ? "-" : "+"}
+                {openIndex === index ? "-" : "+"}
               </button>
             </div>
 
-            {openIndices.includes(index) && (
+            {openIndex === index && (
               <div>
                 <div className="p-4 ml-auto text-sm sm:text-base text-gray-600 border-t-2 border-gray-300 mx-4 break-words">
                   <p>{item.description}</p>

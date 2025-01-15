@@ -26,7 +26,7 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center mt-12 lg:mt-0 lg:w-1/2 max-w-screen-xl">
-            <img src={`/images/9.png`} />
+            <img src={`/images/9.png`} className="h-52" />
           </div>
         </div>
       </section>
