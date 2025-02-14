@@ -18,7 +18,7 @@ export default function Hero() {
       opacity: 1,
       delay: 1.5,
       y: 0,
-      x: 50, // Move 20px right
+      // x: 50, // Move 20px right
       duration: 1, // 1 second duration
       // repeat: -1, // Infinite repeat
       yoyo: true, // Move back and forth
