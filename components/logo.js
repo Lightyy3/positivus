@@ -1,7 +1,19 @@
 "use client";
 import { useState } from "react";
 
+import Link from "next/link";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 export default function Logo() {
+  useGSAP(() => {
+    gsap.to("#logo", {
+      opacity: 1,
+      delay: 1.5,
+      y: 0,
+    });
+  }, []);
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
@@ -38,7 +50,10 @@ export default function Logo() {
               Check Out Our Partners
             </h2> */}
 
-            <div className="flex-1 relative overflow-hidden">
+            <div
+              id="logo"
+              className="flex-1 relative overflow-hidden opacity-0 translate-y-20"
+            >
               <div
                 className="flex transition-transform duration-700 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}

@@ -1,7 +1,18 @@
+"use client";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Services() {
+  useGSAP(() => {
+    gsap.to("#services", {
+      opacity: 1,
+      delay: 2,
+      y: 0,
+    });
+  }, []);
   const services = [
     {
       title: "Search engine",
@@ -60,7 +71,7 @@ export default function Services() {
   ];
   return (
     <>
-      <div className="py-24 bg-white">
+      <div id="services" className="py-24 bg-white opacity-0 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:space-x-6">
             <h2 className="text-2xl px-6 py-3 text-black bg-lime-400  rounded-3xl">

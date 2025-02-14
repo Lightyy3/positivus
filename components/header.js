@@ -25,7 +25,7 @@ export default function Header() {
       repeat: -1, // Infinite repeat
       yoyo: true, // Move back and forth
       rotation: 360,
-      ease: "power1.inOut", // Smooth transition
+      ease: "bounce.out", // Smooth transition
     });
   }, []);
 
@@ -62,7 +62,7 @@ export default function Header() {
             className={
               path === "/Quote"
                 ? "text-lime-400 hover:text-lime-500 font-semibold border-b-2 border-lime-400 py-2"
-                : "text-black border-black border-2 hover:text-gray-800 hover:bg-lime-500 py-2  rounded-full px-4"
+                : "text-black border-black border-2 hover:text-gray-800 hover:bg-lime-400 py-2  rounded-full px-4"
             }
           >
             Request a quote
