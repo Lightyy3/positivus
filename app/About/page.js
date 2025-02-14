@@ -80,8 +80,8 @@ export default function About() {
                 className="shadow-md p-6 text-center rounded-3xl"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 rounded-full bg-green-200 flex items-center justify-center">
-                    <span className="text-3xl font-semibold text-green-600">
+                  <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center">
+                    <span className="text-3xl font-semibold text-lime-400">
                       {member.name.charAt(0)}
                     </span>
                   </div>
@@ -94,7 +94,7 @@ export default function About() {
                 <div className="mt-4 container ">
                   <Link
                     href="/Services"
-                    className="text-green-600 hover:text-green-800 "
+                    className="text-lime-400 hover:text-lime-500 "
                   >
                     <svg
                       className="w-6 h-6 inline"
@@ -115,7 +115,7 @@ export default function About() {
           </div>
           <div className="mt-12 text-center">
             <Link
-              className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 "
+              className="bg-lime-400 text-white px-6 py-2 rounded-full hover:bg-lime-500 "
               href="/Services"
             >
               See more
@@ -125,6 +125,7 @@ export default function About() {
 
         <Footer />
       </div>
+      <Header />
     </>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Logo() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,22 +13,30 @@ export default function Logo() {
     "/images/30.png",
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 3000); // Slide changes every 3 seconds
+  // State-based timing logic
+  const [isAnimating, setIsAnimating] = useState(false);
 
-    return () => clearInterval(interval);
-  }, [slides.length]);
+  const handleNextSlide = () => {
+    setIsAnimating(true); // Start animation
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length); // Move to the next slide
+      setIsAnimating(false); // End animation after the transition
+    }, 3000); // Delay time for slide change
+  };
+
+  // Trigger automatic slide change after rendering
+  if (!isAnimating) {
+    handleNextSlide();
+  }
 
   return (
     <section className="bg-white mt-12">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
         <div className="flex items-center gap-0">
           <div className="flex items-center">
-            <h2 className="hidden sm:block text-2xl text-white bg-green-500 p-6 rounded-3xl">
+            {/* <h2 className="hidden sm:block text-2xl text-white bg-green-500 p-6 rounded-3xl">
               Check Out Our Partners
-            </h2>
+            </h2> */}
 
             <div className="flex-1 relative overflow-hidden">
               <div
@@ -51,7 +59,7 @@ export default function Logo() {
                     key={index}
                     onClick={() => setCurrentIndex(index)}
                     className={`h-2 w-2 rounded-full ${
-                      currentIndex === index ? "bg-green-600" : "bg-gray-400"
+                      currentIndex === index ? "bg-lime-400" : "bg-gray-400"
                     }`}
                   ></button>
                 ))}

@@ -60,8 +60,8 @@ export default function Accordion() {
             key={index}
             className={`rounded-xl shadow-md border-2 ${
               openIndex === index
-                ? "border-green-500 bg-green-100"
-                : "border-gray-300 bg-gray-50"
+                ? "border-lime-400 bg-green-100"
+                : "border-black bg-gray-50 "
             } mb-4`}
           >
             <div

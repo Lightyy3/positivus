@@ -22,7 +22,7 @@ export default function Header() {
     <header className="bg-white shadow-md fixed top-0  w-full z-50">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex  justify-between">
         <div className="flex space-x-4 mt-2">
-          <img src="/images/15.png" alt="Logo" className="h-8" />
+          <img src="/images/110.svg" alt="Logo" className="h-8" />
           <Link href="/" className="text-xl font-bold text-gray-800">
             Positivus
           </Link>
@@ -35,8 +35,8 @@ export default function Header() {
               href={item.href}
               className={
                 path === item.href
-                  ? "text-green-500 hover:text-green-600 font-semibold border-b-2 border-green-500 py-2"
-                  : "text-gray-700 hover:text-green-500 py-2"
+                  ? "text-lime-400 hover:text-lime-500 font-semibold border-b-2 border-lime-400 py-2"
+                  : "text-gray-700 hover:text-lime-500 py-2"
               }
             >
               {item.label}
@@ -46,8 +46,8 @@ export default function Header() {
             href="/Quote"
             className={
               path === "/Quote"
-                ? "text-green-500 hover:text-green-600 font-semibold border-b-2 border-green-500 py-2"
-                : "text-white hover:text-gray-800 hover:bg-green-600 py-2 bg-green-500 rounded-full px-4"
+                ? "text-lime-400 hover:text-lime-500 font-semibold border-b-2 border-lime-400 py-2"
+                : "text-black border-black border-2 hover:text-gray-800 hover:bg-lime-500 py-2  rounded-full px-4"
             }
           >
             Request a quote
@@ -78,19 +78,19 @@ export default function Header() {
       {isMenuOpen && (
         <nav className="lg:hidden bg-white shadow-md rounded-md">
           <div className="space-y-2 px-4 py-4">
-            <hr className="w-full h-1 bg-green-500" />
+            <hr className="w-full h-1 bg-lime-400" />
             {files.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block text-gray-700 hover:text-green-500 py-2 text-center"
+                className="block text-gray-700 hover:text-lime-500 py-2 text-center"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href="/Quote"
-              className="block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 text-center"
+              className="block bg-lime-400 text-white px-4 py-2 rounded-full hover:bg-lime-500 text-center"
             >
               Request a quote
             </Link>

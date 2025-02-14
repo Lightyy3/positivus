@@ -37,7 +37,7 @@ export default function Blog() {
                   </p>
                   <Link
                     href="/Services"
-                    className="flex text-green-400 hover:text-green-500 space-x-2"
+                    className="flex text-lime-400 hover:text-lime-500 space-x-2"
                   >
                     <span>Learn more</span>
                     <svg
@@ -62,7 +62,7 @@ export default function Blog() {
                   </p>
                   <Link
                     href="/Services"
-                    className="flex text-green-400 hover:text-green-500 space-x-2"
+                    className="flex text-lime-400 hover:text-lime-500 space-x-2"
                   >
                     <span>Learn more</span>
                     <svg
@@ -85,7 +85,7 @@ export default function Blog() {
                   </p>
                   <Link
                     href="/Services"
-                    className="flex text-green-400 hover:text-green-500 space-x-2"
+                    className="flex text-lime-400 hover:text-lime-500 space-x-2"
                   >
                     <span>Learn more</span>
                     <svg
@@ -117,7 +117,7 @@ export default function Blog() {
             <div className="mt-8 flex justify-center sm:justify-start">
               <Link
                 href="/Quote"
-                className="bg-black text-white px-4 py-2 ml-6 sm:px-6 sm:py-3 rounded-3xl hover:bg-green-500 whitespace-nowrap max-w-screen-xl"
+                className="bg-black text-white px-4 py-2 ml-6 sm:px-6 sm:py-3 rounded-3xl hover:bg-lime-500 whitespace-nowrap max-w-screen-xl"
               >
                 Get your free proposal
               </Link>

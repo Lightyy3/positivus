@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="mt-6 flex space-x-4 items-center">
               <Link
                 href="/Quote"
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 text-center rounded-full"
+                className="bg-black hover:bg-lime-400 text-white text-2xl px-6 py-3 text-center rounded-3xl"
               >
                 Book a consultation
               </Link>
@@ -26,7 +26,7 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center mt-12 lg:mt-0 lg:w-1/2 max-w-screen-xl">
-            <img src={`/images/9.png`} className="h-52" />
+            <img src={`/images/9.png`} className="h-60" />
           </div>
         </div>
       </section>

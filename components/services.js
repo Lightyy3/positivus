@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Services() {
   const services = [
@@ -9,12 +10,12 @@ export default function Services() {
       textColor: "text-black-600  rounded ",
       icon: `/images/8.png`,
       descriptionColor: "text-black-600",
-      titleBg: "bg-green-400 rounded-lg",
+      titleBg: "bg-lime-400 rounded-lg",
     },
     {
       title: "Pay-per-click",
       titleBottom: "Advertising",
-      bgColor: "bg-green-400",
+      bgColor: "bg-lime-400",
       textColor: "text-black  rounded",
       icon: `/images/8.png`,
       descriptionColor: "text-black-600",
@@ -36,12 +37,12 @@ export default function Services() {
       textColor: "text-black rounded",
       icon: `/images/8.png`,
       descriptionColor: "text-black-600",
-      titleBg: "bg-green-400 rounded-lg",
+      titleBg: "bg-lime-400 rounded-lg",
     },
     {
       title: "Content",
       titleBottom: "Creation",
-      bgColor: "bg-green-400",
+      bgColor: "bg-lime-400",
       textColor: "text-black rounded",
       icon: `/images/8.png`,
       descriptionColor: "text-black-600",
@@ -54,7 +55,7 @@ export default function Services() {
       textColor: "text-black rounded",
       icon: `/images/8.png`,
       descriptionColor: "text-white",
-      titleBg: "bg-green-400 rounded-lg",
+      titleBg: "bg-lime-400 rounded-lg",
     },
   ];
   return (
@@ -62,7 +63,7 @@ export default function Services() {
       <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:space-x-6">
-            <h2 className="text-4xl font-bold text-gray-900 bg-green-500 p-3 rounded-3xl">
+            <h2 className="text-2xl px-6 py-3 text-white bg-lime-400  rounded-3xl">
               Services
             </h2>
             <p className="mt-6 md:mt-0 text-md text-gray-700 max-w-2xl text-center ">
@@ -78,7 +79,7 @@ export default function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`relative p-4 rounded-3xl border-b-2 h-56 border-b-black ${service.bgColor}`}
+                className={`relative p-4 rounded-3xl border-b-8 h-56 border-b-black ${service.bgColor}`}
               >
                 <div className="flex justify-between gap-4">
                   <div
@@ -108,6 +109,13 @@ export default function Services() {
                         <div className="w-20 h-20  bg-black rounded-full absolute  right-12"></div>
                         <div className="w-16 h-16  bg-white border border-gray-400 rounded-full absolute top-4 right-1"></div>
                         <div className="w-14 h-14  bg-lime-400 rotate-45 absolute top-12 right-12"></div>
+                        {/* <Image
+                          className="w-20 h-20  bg-black rounded-full absolute  right-12"
+                          src="/images/106.png"
+                          alt="Facebook"
+                          width={36}
+                          height={36}
+                        /> */}
                       </div>
                     </div>
                   </div>
@@ -115,7 +123,7 @@ export default function Services() {
 
                 <Link
                   href="/Usecases"
-                  className={`flex gap-2 pb-3 items-center mt-4 text-xl ${service.descriptionColor} hover:text-green-300`}
+                  className={`flex gap-2 pb-3 items-center mt-4 text-xl ${service.descriptionColor} hover:text-lime-400`}
                 >
                   <p>Learn more</p>
                   <svg

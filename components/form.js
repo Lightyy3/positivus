@@ -34,7 +34,7 @@ export default function Form() {
               value={formData.name}
               onChange={handleInputChange}
               placeholder="Enter your name"
-              className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-lime-400"
               required
             />
           </div>
@@ -48,7 +48,7 @@ export default function Form() {
               value={formData.email}
               onChange={handleInputChange}
               placeholder="Enter your email"
-              className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-lime-400"
               required
             />
           </div>
@@ -61,7 +61,7 @@ export default function Form() {
             name="service"
             value={formData.service}
             onChange={handleInputChange}
-            className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-lime-400"
             required
           >
             <option value="">Select a service</option>
@@ -81,7 +81,7 @@ export default function Form() {
             onChange={handleInputChange}
             placeholder="Describe your project..."
             rows="6"
-            className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-lime-400"
             required
           ></textarea>
         </div>
@@ -95,11 +95,11 @@ export default function Form() {
             value={formData.budget}
             onChange={handleInputChange}
             placeholder="Enter your budget (optional)"
-            className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-lime-400"
           />
         </div>
         <div className="mt-8 text-center ">
-          <button className="bg-green-600 text-white px-2 xs:px-8 py-4 text-lg rounded-full hover:bg-green-700  max-w-screen-xl mx-auto">
+          <button className="bg-lime-400 text-black px-2 xs:px-8 p-4 text-lg rounded-full hover:bg-lime-500 max-w-screen-xl mx-auto">
             Submit Request
           </button>
         </div>

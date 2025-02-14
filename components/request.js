@@ -9,9 +9,9 @@ export default function Request() {
         {requests.map((request, index) => (
           <div
             key={index}
-            className="shadow-lg rounded-3xl p-6 border border-green-300 hover:shadow-xl "
+            className="shadow-lg rounded-3xl p-6 border border-lime-400 hover:shadow-xl "
           >
-            <h2 className="text-2xl  text-green-600 mb-4">
+            <h2 className="text-2xl  text-lime-400 mb-4">
               Name: {request.name}
             </h2>
             <p className="text-gray-700 break-words ">Email: {request.email}</p>

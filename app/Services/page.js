@@ -58,7 +58,7 @@ export default function Services() {
                 <h3 className="text-2xl font-bold text-gray-800 mb-4 break-words">
                   {plan.title}
                 </h3>
-                <p className="text-2xl md:text-3xl font-extrabold text-green-600 mb-6 break-words text-center  max-w-full md:max-w-lg">
+                <p className="text-2xl md:text-3xl font-extrabold text-lime-400 mb-6 break-words text-center  max-w-full md:max-w-lg">
                   {plan.price}
                 </p>
                 <ul className="flex-1 text-gray-600 space-y-3 mb-6 break-words">
@@ -68,7 +68,7 @@ export default function Services() {
                       className="flex items-center break-words pr-2"
                     >
                       <svg
-                        className="w-5 h-5 text-green-500"
+                        className="w-5 h-5 text-lime-400"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ export default function Services() {
                 </ul>
                 <Link
                   href="/Quote"
-                  className="bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700"
+                  className="bg-lime-400 text-white py-3 px-6 rounded-full hover:bg-lime-500"
                 >
                   Get Started
                 </Link>
