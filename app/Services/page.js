@@ -87,7 +87,7 @@ export default function Services() {
                 </ul>
                 <Link
                   href="/Quote"
-                  className="bg-lime-400 text-white py-3 px-6 rounded-full hover:bg-lime-500"
+                  className="bg-lime-400 text-black py-3 px-6 rounded-full hover:bg-lime-500"
                 >
                   Get Started
                 </Link>

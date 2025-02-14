@@ -1,10 +1,13 @@
 "use client";
+import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import gsap from "gsap";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const logoRef = useRef(null); // Create a reference for the logo
 
   const path = usePathname();
   const files = [
@@ -15,14 +18,26 @@ export default function Header() {
     { href: "/Blog", label: "Blog" },
   ];
 
+  useGSAP(() => {
+    gsap.to(logoRef.current, {
+      x: 150, // Move 20px right
+      duration: 2, // 1 second duration
+      repeat: -1, // Infinite repeat
+      yoyo: true, // Move back and forth
+      rotation: 360,
+      ease: "power1.inOut", // Smooth transition
+    });
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <header className="bg-white shadow-md fixed top-0  w-full z-50">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex  justify-between">
         <div className="flex space-x-4 mt-2">
-          <img src="/images/110.svg" alt="Logo" className="h-8" />
+          <img ref={logoRef} src="/images/110.svg" alt="Logo" className="h-8" />
           <Link href="/" className="text-xl font-bold text-gray-800">
             Positivus
           </Link>

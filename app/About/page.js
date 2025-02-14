@@ -115,7 +115,7 @@ export default function About() {
           </div>
           <div className="mt-12 text-center">
             <Link
-              className="bg-lime-400 text-white px-6 py-2 rounded-full hover:bg-lime-500 "
+              className="bg-lime-400 text-black px-6 py-2 rounded-full hover:bg-lime-500 "
               href="/Services"
             >
               See more

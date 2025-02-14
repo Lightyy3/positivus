@@ -99,7 +99,7 @@ export default function Form() {
           />
         </div>
         <div className="mt-8 text-center ">
-          <button className="bg-lime-400 text-black px-2 xs:px-8 p-4 text-lg rounded-full hover:bg-lime-500 max-w-screen-xl mx-auto">
+          <button className="bg-lime-400 text-black px-4 xs:px-8 p-4 text-lg rounded-full hover:bg-lime-500 max-w-screen-xl mx-auto">
             Submit Request
           </button>
         </div>

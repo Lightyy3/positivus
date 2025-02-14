@@ -63,7 +63,7 @@ export default function Services() {
       <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:space-x-6">
-            <h2 className="text-2xl px-6 py-3 text-white bg-lime-400  rounded-3xl">
+            <h2 className="text-2xl px-6 py-3 text-black bg-lime-400  rounded-3xl">
               Services
             </h2>
             <p className="mt-6 md:mt-0 text-md text-gray-700 max-w-2xl text-center ">

@@ -60,7 +60,7 @@ export default function Accordion() {
             key={index}
             className={`rounded-xl shadow-md border-2 ${
               openIndex === index
-                ? "border-lime-400 bg-green-100"
+                ? "border-lime-400 bg-lime-400"
                 : "border-black bg-gray-50 "
             } mb-4`}
           >
@@ -70,14 +70,14 @@ export default function Accordion() {
             >
               <h3
                 className={`text-base sm:text-lg font-semibold ${
-                  openIndex === index ? "text-gray-900" : "text-gray-700"
+                  openIndex === index ? "text-black" : "text-black"
                 } break-words sm:truncate max-w-full`}
               >
                 {item.title}
               </h3>
               <button
                 className={`text-base sm:text-lg font-bold ${
-                  openIndex === index ? "text-gray-900" : "text-gray-500"
+                  openIndex === index ? "text-black" : "text-black"
                 } mt-2 sm:mt-0`}
               >
                 {openIndex === index ? "-" : "+"}

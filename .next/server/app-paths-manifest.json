@@ -1,9 +1,9 @@
 {
+  "/Services/page": "app/Services/page.js",
+  "/Quote/page": "app/Quote/page.js",
+  "/About/page": "app/About/page.js",
+  "/Usecases/page": "app/Usecases/page.js",
   "/List/page": "app/List/page.js",
   "/Blog/page": "app/Blog/page.js",
-  "/Quote/page": "app/Quote/page.js",
-  "/page": "app/page.js",
-  "/About/page": "app/About/page.js",
-  "/Services/page": "app/Services/page.js",
-  "/Usecases/page": "app/Usecases/page.js"
+  "/page": "app/page.js"
 }
