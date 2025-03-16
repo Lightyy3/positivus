@@ -25,7 +25,7 @@ Positivus is a dynamic digital marketing landing page designed to provide a high
 ## Features
 
 - **Responsive Design**: The landing page is fully optimized for all screen sizes, ensuring a seamless user experience across mobile, tablet, and desktop devices.
-- **3D Transformations**: Utilizes modern CSS3 techniques to implement 3D transformations, enhancing the visual appeal and providing an immersive browsing experience.
+- **3D Transformations**: Utilizes modern CSS techniques to implement 3D transformations, enhancing the visual appeal and providing an immersive browsing experience.
 - **Interactive Sliders/Carousels**: Incorporates interactive sliders and carousels to showcase content in a visually engaging and dynamic way, keeping users engaged and improving content discoverability.
 - **SEO Optimization**: Designed with SEO best practices in mind, the landing page is optimized for search engines to improve organic reach and visibility.
 - **Scroll-Triggered Animations**: Implements scroll-triggered animations that activate as users scroll through the page, adding an interactive and visually captivating layer to the user experience.
