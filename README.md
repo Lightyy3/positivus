@@ -2,6 +2,8 @@
 
   Deployment Link: https://positivus-lac.vercel.app/
 
+![Tech Stack](https://img.shields.io/badge/-Three.js-black?style=for-the-badge&logoColor=white&logo=three.js&color=000000)
+![Tech Stack](https://img.shields.io/badge/-GSAP-black?style=for-the-badge&logoColor=white&logo=green-sock&color=000000)
 ![Tech Stack](https://img.shields.io/badge/-SQLite-black?style=for-the-badge&logoColor=white&logo=sqlite&color=003B57)
 ![Tech Stack](https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000)
 ![Tech Stack](https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4)
