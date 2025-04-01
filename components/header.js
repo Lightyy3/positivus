@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useRef } from "react";
 import gsap from "gsap";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,52 +43,72 @@ export default function Header() {
             Positivus
           </Link>
         </div>
-
-        <nav className="hidden lg:flex space-x-10">
-          {files.map((item) => (
+        <SignedIn>
+          {/* </SignedIn> */}
+          <nav className="hidden lg:flex space-x-10">
+            {files.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={
+                  path === item.href
+                    ? "text-lime-400 hover:text-lime-500 font-semibold border-b-2 border-lime-400 py-2"
+                    : "text-gray-700 hover:text-lime-500 py-2"
+                }
+              >
+                {item.label}
+              </Link>
+            ))}
             <Link
-              key={item.href}
-              href={item.href}
+              href="/Quote"
               className={
-                path === item.href
+                path === "/Quote"
                   ? "text-lime-400 hover:text-lime-500 font-semibold border-b-2 border-lime-400 py-2"
-                  : "text-gray-700 hover:text-lime-500 py-2"
+                  : "text-black border-black border-2  bg-lime-400 hover:bg-black hover:text-white py-2  rounded-full px-4"
               }
             >
-              {item.label}
+              Request a quote
             </Link>
-          ))}
-          <Link
-            href="/Quote"
-            className={
-              path === "/Quote"
-                ? "text-lime-400 hover:text-lime-500 font-semibold border-b-2 border-lime-400 py-2"
-                : "text-black border-black border-2 hover:text-gray-800 hover:bg-lime-400 py-2  rounded-full px-4"
-            }
-          >
-            Request a quote
-          </Link>
-        </nav>
+          </nav>
+        </SignedIn>
+        <SignedIn>
+          <UserButton afterSignOutUrl="/" />
+          {/* <MobileNav /> */}
+        </SignedIn>
 
-        <button
-          onClick={toggleMenu}
-          className="lg:hidden flex text-gray-700 mt-3"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+        <SignedOut>
+          <button asChild className="rounded-full" size="lg">
+            <Link
+              href="/sign-in"
+              className="text-black border-black border-2  bg-lime-400 py-2 hover:bg-black hover:text-white rounded-full px-4"
+            >
+              Login
+            </Link>
+          </button>
+        </SignedOut>
+        <SignedIn>
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden flex text-gray-700 mt-3"
           >
-            <path
-              strokeWidth="2"
-              d={
-                isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
-              }
-            />
-          </svg>
-        </button>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeWidth="2"
+                d={
+                  isMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
+              />
+            </svg>
+          </button>
+        </SignedIn>
       </div>
 
       {isMenuOpen && (

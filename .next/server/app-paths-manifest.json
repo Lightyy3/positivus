@@ -1,3 +1,13 @@
 {
-  "/page": "app/page.js"
+  "/_not-found": "app/_not-found.js",
+  "/api/webhook/clerk/route": "app/api/webhook/clerk/route.js",
+  "/(auth)/sign-in/[[...sign-in]]/page": "app/(auth)/sign-in/[[...sign-in]]/page.js",
+  "/(root)/Services/page": "app/(root)/Services/page.js",
+  "/(root)/Quote/page": "app/(root)/Quote/page.js",
+  "/(root)/About/page": "app/(root)/About/page.js",
+  "/(auth)/sign-up/[[...sign-up]]/page": "app/(auth)/sign-up/[[...sign-up]]/page.js",
+  "/(root)/Usecases/page": "app/(root)/Usecases/page.js",
+  "/(root)/Blog/page": "app/(root)/Blog/page.js",
+  "/(root)/List/page": "app/(root)/List/page.js",
+  "/(root)/page": "app/(root)/page.js"
 }
